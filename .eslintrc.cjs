@@ -21,7 +21,7 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "ignorePatterns": [".eslintrc.cjs", "dist", "vite.config.ts"],
+    "ignorePatterns": [".eslintrc.cjs", "dist", "vite.config.ts", "commitlint.config.js"],
     "plugins": ["simple-import-sort"],
     "rules": {
         "simple-import-sort/imports": "error"
