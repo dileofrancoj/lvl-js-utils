@@ -89,6 +89,17 @@ export default defineConfig({
     yarn add -D prettier
 ```
 
+.prettierrc
+```
+{
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true
+}
+
+```
+
 Extender prettier del eslint base typescript: 
 https://www.npmjs.com/package/eslint-config-standard-typescript-prettier
 
@@ -99,10 +110,22 @@ Una herramienta que te ayuda a correr scripts en diferentes estadios de la aplic
 Para instalar o correr el programa husky-init el proyecto necesita ser un repo
 ``` 
     git init
-    npx husky-init && yarn
+    npx husky-init && yarn o bien npm install
     npx husky add .husky/pre-commit "npm run lint"
-    
 ```
 
 - pre-commit (ejecutar scripts antes de efectuar un commit)
 - pre-push (ejecutar scripts antes de hacer un push)
+
+Commitlint documentation:
+https://github.com/conventional-changelog/commitlint
+
+```bash
+    yarn add -D @commitlint/config-conventional @commitlint/cli
+    echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.cjs
+    npx husky add .husky/commit-msg 'npx --no -- commitlint --edit ${1}'
+```
+
+
+
+
