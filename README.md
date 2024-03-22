@@ -128,6 +128,8 @@ https://github.com/conventional-changelog/commitlint
 
 ### Path Alias
 
+
+
 ``` 
   yarn add -D vite-tsconfig-paths // dtypes
   yarn add -D vitest
@@ -148,8 +150,6 @@ https://github.com/conventional-changelog/commitlint
 - reverse
 - equalsIgnoreCase: Es una función que recibe 2 strings y compara si son iguales (aplicando lowercase)
 
-## utils
-- canUseDom: Devuelve true si puede utilizarse el dom (window)
 
 ## Arrays
 - arraylable: Recibe un argumento (generico o nulo). La función devuelve el mismo array value si es un array válido y si el elemento es un elemento no arrayleable devuelve un array []
@@ -158,3 +158,20 @@ https://github.com/conventional-changelog/commitlint
 - getById 
 - getIndexById
 - removeItem/s
+
+## Utils
+- canUseDom: Devuelve true si puede utilizarse el dom (window)
+
+### Timing
+- debounce
+- throttle
+  
+### Pendientes de la lib
+- Funciones de timing
+- Funciones de logging
+- Funciones de strings
+- Excluir test de la build
+- Flujo de Testing en commit
+- Yalc
+- YAML en github actions
+- Mutation testing?
