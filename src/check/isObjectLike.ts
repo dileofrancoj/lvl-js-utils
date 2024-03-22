@@ -1,4 +1,4 @@
-import { typeOf } from '../misc'
+import { typeOf } from '@/misc'
 
 type GenericObject = Record<string | number, unknown>
 

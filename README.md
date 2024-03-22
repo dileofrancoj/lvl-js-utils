@@ -126,6 +126,52 @@ https://github.com/conventional-changelog/commitlint
     npx husky add .husky/commit-msg 'npx --no -- commitlint --edit ${1}'
 ```
 
+### Path Alias
 
 
 
+``` 
+  yarn add -D vite-tsconfig-paths // dtypes
+  yarn add -D vitest
+```
+
+## Utilidades
+
+## Check
+
+- isNullOrUndefined: Es una función que recibe un valor X de tipo unknown y devolvemos un booleano (predicado): True si el value es nulo o undefined, false en caso contrario
+  
+- isObject: Es una función que recibe un valor X unkwnown y devuleve un booleano true si el typeOf es object
+
+## String
+
+- Includes -> Una función que recibe un string y un value a buscar dentro de ese string. Devuelve un booleano si el valor es encontrado en el string
+- Capitalize (hola -> Hola) 
+- reverse
+- equalsIgnoreCase: Es una función que recibe 2 strings y compara si son iguales (aplicando lowercase)
+
+
+## Arrays
+- arraylable: Recibe un argumento (generico o nulo). La función devuelve el mismo array value si es un array válido y si el elemento es un elemento no arrayleable devuelve un array []
+- sum
+- sumBy
+- getById 
+- getIndexById
+- removeItem/s
+
+## Utils
+- canUseDom: Devuelve true si puede utilizarse el dom (window)
+
+### Timing
+- debounce
+- throttle
+  
+### Pendientes de la lib
+- Funciones de timing
+- Funciones de logging
+- Funciones de strings
+- Excluir test de la build
+- Flujo de Testing en commit
+- Yalc
+- YAML en github actions
+- Mutation testing?

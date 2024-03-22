@@ -1,6 +1,7 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   build: {
@@ -9,6 +10,16 @@ export default defineConfig({
       name: "my-lib",
       fileName: "my-lib",
     },
+    sourcemap: true
   },
-  plugins: [dts({ outDir: "dist" })],
+  resolve: {
+    alias: {
+      "@": resolve(__dirname, '/src')
+    }
+  },
+  plugins: [dts({ outDir: "dist", include: ["src/"] }), tsconfigPaths()],
+  // @ts-expect-error test types are not defined
+  test: {
+    globals: true
+  }
 });
