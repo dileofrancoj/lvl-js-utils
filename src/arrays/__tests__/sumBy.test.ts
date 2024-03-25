@@ -1,9 +1,10 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, test } from 'vitest'
 
 import { sumBy } from '../sumBy'
 
+// describe: Crear grupos
 describe('sumBy', () => {
-  it('should sum every single number by the given accesor', () => {
+  test('should sum every single number by the given accesor', () => {
     const dataObj = [
       { value: 2 },
       { value: 3 }
