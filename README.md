@@ -124,11 +124,10 @@ https://github.com/conventional-changelog/commitlint
     yarn add -D @commitlint/config-conventional @commitlint/cli
     echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.cjs
     npx husky add .husky/commit-msg 'npx --no -- commitlint --edit ${1}'
+    npx husky add .husky/pre-push "npm run test && npm run build"
 ```
 
 ### Path Alias
-
-
 
 ``` 
   yarn add -D vite-tsconfig-paths // dtypes
